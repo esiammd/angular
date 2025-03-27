@@ -3,9 +3,7 @@ import { Component, computed, signal } from "@angular/core";
 
 @Component({
   templateUrl: './hero-page.component.html',
-  imports: [
-    UpperCasePipe
-  ]
+  imports: [UpperCasePipe]
 })
 export class HeroPageComponent {
   name = signal('Ironman');
@@ -18,7 +16,6 @@ export class HeroPageComponent {
 
   changeHero() {
     this.name.set('Spiderman');
-    this.age.set(22);
   }
 
   resetForm() {

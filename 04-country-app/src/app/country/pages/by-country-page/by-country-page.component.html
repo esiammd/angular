@@ -1,0 +1,12 @@
+<country-search-input
+  placeholder="Buscar por país"
+  [initialValue]="queryParam"
+  (search)="query.set($event)"
+/>
+
+<country-list
+  [countries]="countryResource.value() ?? []"
+  [errorMessage]="countryResource.error()"
+  [isLoading]="countryResource.isLoading()"
+  [isEmpty]="!countryResource.hasValue()"
+/>
